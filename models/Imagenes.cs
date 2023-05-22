@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Saludo {
+namespace IMG {
 
   /// <summary>Holder for reflection information generated from imagenes.proto</summary>
   public static partial class ImagenesReflection {
@@ -24,20 +24,19 @@ namespace Saludo {
     static ImagenesReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5pbWFnZW5lcy5wcm90bxIGc2FsdWRvIh0KD0ltYWdlbmVzUmVxdWVzdBIK",
-            "CgJpZBgBIAMoBSIWCghQZXRpY2lvbhIKCgJpZBgBIAMoBSIyChBJbWFnZW5l",
-            "c1Jlc3BvbnNlEh4KBmltYWdlbhgBIAMoCzIOLnNhbHVkby5JbWFnZW4iNAoG",
-            "SW1hZ2VuEgoKAmlkGAEgASgFEg4KBm5vbWJyZRgCIAEoCRIOCgZpbWFnZW4Y",
-            "AyABKAwyVwoPSW1hZ2VuZXNTZXJ2aWNlEkQKD09idGVuZXJJbWFnZW5lcxIX",
-            "LnNhbHVkby5JbWFnZW5lc1JlcXVlc3QaGC5zYWx1ZG8uSW1hZ2VuZXNSZXNw",
-            "b25zZWIGcHJvdG8z"));
+            "Cg5pbWFnZW5lcy5wcm90bxIDSU1HIh0KD0ltYWdlbmVzUmVxdWVzdBIKCgJp",
+            "ZBgBIAMoBSIWCghQZXRpY2lvbhIKCgJpZBgBIAMoBSIvChBJbWFnZW5lc1Jl",
+            "c3BvbnNlEhsKBmltYWdlbhgBIAMoCzILLklNRy5JbWFnZW4iNAoGSW1hZ2Vu",
+            "EgoKAmlkGAEgASgFEg4KBm5vbWJyZRgCIAEoCRIOCgZpbWFnZW4YAyABKAwy",
+            "UQoPSW1hZ2VuZXNTZXJ2aWNlEj4KD09idGVuZXJJbWFnZW5lcxIULklNRy5J",
+            "bWFnZW5lc1JlcXVlc3QaFS5JTUcuSW1hZ2VuZXNSZXNwb25zZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Saludo.ImagenesRequest), global::Saludo.ImagenesRequest.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Saludo.Peticion), global::Saludo.Peticion.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Saludo.ImagenesResponse), global::Saludo.ImagenesResponse.Parser, new[]{ "Imagen" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Saludo.Imagen), global::Saludo.Imagen.Parser, new[]{ "Id", "Nombre", "Imagen_" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::IMG.ImagenesRequest), global::IMG.ImagenesRequest.Parser, new[]{ "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::IMG.Peticion), global::IMG.Peticion.Parser, new[]{ "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::IMG.ImagenesResponse), global::IMG.ImagenesResponse.Parser, new[]{ "Imagen" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::IMG.Imagen), global::IMG.Imagen.Parser, new[]{ "Id", "Nombre", "Imagen_" }, null, null, null, null)
           }));
     }
     #endregion
@@ -58,7 +57,7 @@ namespace Saludo {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Saludo.ImagenesReflection.Descriptor.MessageTypes[0]; }
+      get { return global::IMG.ImagenesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -238,7 +237,7 @@ namespace Saludo {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Saludo.ImagenesReflection.Descriptor.MessageTypes[1]; }
+      get { return global::IMG.ImagenesReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -418,7 +417,7 @@ namespace Saludo {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Saludo.ImagenesReflection.Descriptor.MessageTypes[2]; }
+      get { return global::IMG.ImagenesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -450,12 +449,12 @@ namespace Saludo {
 
     /// <summary>Field number for the "imagen" field.</summary>
     public const int ImagenFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Saludo.Imagen> _repeated_imagen_codec
-        = pb::FieldCodec.ForMessage(10, global::Saludo.Imagen.Parser);
-    private readonly pbc::RepeatedField<global::Saludo.Imagen> imagen_ = new pbc::RepeatedField<global::Saludo.Imagen>();
+    private static readonly pb::FieldCodec<global::IMG.Imagen> _repeated_imagen_codec
+        = pb::FieldCodec.ForMessage(10, global::IMG.Imagen.Parser);
+    private readonly pbc::RepeatedField<global::IMG.Imagen> imagen_ = new pbc::RepeatedField<global::IMG.Imagen>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Saludo.Imagen> Imagen {
+    public pbc::RepeatedField<global::IMG.Imagen> Imagen {
       get { return imagen_; }
     }
 
@@ -596,7 +595,7 @@ namespace Saludo {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Saludo.ImagenesReflection.Descriptor.MessageTypes[3]; }
+      get { return global::IMG.ImagenesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

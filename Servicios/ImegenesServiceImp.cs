@@ -1,8 +1,8 @@
 ﻿namespace TACOSImagenesAPI.Servicios;
 
 using Grpc.Core;
-using Saludo;
-using static Saludo.ImagenesService;
+using IMG;
+using static IMG.ImagenesService;
 using TACOSImagenesAPI.Negocio;
 using TACOSImagenesAPI.Modelos;
 using Google.Protobuf;
@@ -19,10 +19,10 @@ public class ImegenesServiceImp : ImagenesServiceBase
                 new ImagenMgr(contexto).ObtenerImagenesEn(request.Id.ToHashSet<int>());
         }
 
-        List<Saludo.Imagen> imagenesConvertidas = new List<Saludo.Imagen>();
+        List<IMG.Imagen> imagenesConvertidas = new List<IMG.Imagen>();
         foreach (Modelos.Imagen imagenObtenida in imagenesObtenidas)
         {
-            imagenesConvertidas.Add(new Saludo.Imagen
+            imagenesConvertidas.Add(new IMG.Imagen
             {
                 Id = imagenObtenida.Id,
                 Imagen_ = ByteString.CopyFrom(imagenObtenida.ImagenBytes),

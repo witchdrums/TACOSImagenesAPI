@@ -7,10 +7,10 @@
 
 using grpc = global::Grpc.Core;
 
-namespace Saludo {
+namespace IMG {
   public static partial class ImagenesService
   {
-    static readonly string __ServiceName = "saludo.ImagenesService";
+    static readonly string __ServiceName = "IMG.ImagenesService";
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
@@ -46,22 +46,22 @@ namespace Saludo {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Saludo.ImagenesRequest> __Marshaller_saludo_ImagenesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Saludo.ImagenesRequest.Parser));
+    static readonly grpc::Marshaller<global::IMG.ImagenesRequest> __Marshaller_IMG_ImagenesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::IMG.ImagenesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Saludo.ImagenesResponse> __Marshaller_saludo_ImagenesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Saludo.ImagenesResponse.Parser));
+    static readonly grpc::Marshaller<global::IMG.ImagenesResponse> __Marshaller_IMG_ImagenesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::IMG.ImagenesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Saludo.ImagenesRequest, global::Saludo.ImagenesResponse> __Method_ObtenerImagenes = new grpc::Method<global::Saludo.ImagenesRequest, global::Saludo.ImagenesResponse>(
+    static readonly grpc::Method<global::IMG.ImagenesRequest, global::IMG.ImagenesResponse> __Method_ObtenerImagenes = new grpc::Method<global::IMG.ImagenesRequest, global::IMG.ImagenesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ObtenerImagenes",
-        __Marshaller_saludo_ImagenesRequest,
-        __Marshaller_saludo_ImagenesResponse);
+        __Marshaller_IMG_ImagenesRequest,
+        __Marshaller_IMG_ImagenesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Saludo.ImagenesReflection.Descriptor.Services[0]; }
+      get { return global::IMG.ImagenesReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of ImagenesService</summary>
@@ -69,7 +69,7 @@ namespace Saludo {
     public abstract partial class ImagenesServiceBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Saludo.ImagenesResponse> ObtenerImagenes(global::Saludo.ImagenesRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::IMG.ImagenesResponse> ObtenerImagenes(global::IMG.ImagenesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -104,22 +104,22 @@ namespace Saludo {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Saludo.ImagenesResponse ObtenerImagenes(global::Saludo.ImagenesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::IMG.ImagenesResponse ObtenerImagenes(global::IMG.ImagenesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ObtenerImagenes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Saludo.ImagenesResponse ObtenerImagenes(global::Saludo.ImagenesRequest request, grpc::CallOptions options)
+      public virtual global::IMG.ImagenesResponse ObtenerImagenes(global::IMG.ImagenesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ObtenerImagenes, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Saludo.ImagenesResponse> ObtenerImagenesAsync(global::Saludo.ImagenesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::IMG.ImagenesResponse> ObtenerImagenesAsync(global::IMG.ImagenesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ObtenerImagenesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Saludo.ImagenesResponse> ObtenerImagenesAsync(global::Saludo.ImagenesRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::IMG.ImagenesResponse> ObtenerImagenesAsync(global::IMG.ImagenesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ObtenerImagenes, null, options, request);
       }
@@ -147,7 +147,7 @@ namespace Saludo {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ImagenesServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_ObtenerImagenes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Saludo.ImagenesRequest, global::Saludo.ImagenesResponse>(serviceImpl.ObtenerImagenes));
+      serviceBinder.AddMethod(__Method_ObtenerImagenes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::IMG.ImagenesRequest, global::IMG.ImagenesResponse>(serviceImpl.ObtenerImagenes));
     }
 
   }

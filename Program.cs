@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using TACOSImagenesAPI.Negocio;
 using TACOSImagenesAPI.Modelos;
 using Grpc.Core;
-using Saludo;
+using IMG;
 using TACOSImagenesAPI.Servicios;
 
 /*
