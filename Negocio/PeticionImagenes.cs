@@ -2,5 +2,5 @@
 
 public class PeticionImagenes
 {
-    public HashSet<int> RangoDeIds { set; get; }
+    public HashSet<int>? RangoDeIds { set; get; }
 }

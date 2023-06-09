@@ -1,10 +1,13 @@
 using Grpc.Core;
 using IMG;
+using Microsoft.EntityFrameworkCore;
+using TACOSImagenesAPI.Modelos;
 using TACOSImagenesAPI.Servicios;
+
 
 const int Port = 7252;
 
-Grpc.Core.Server server = null;
+Grpc.Core.Server? server = null;
 try
 {
     server = new Grpc.Core.Server()
@@ -27,5 +30,7 @@ catch (IOException e)
 finally
 {
     if (server != null)
+    {
         server.ShutdownAsync().Wait();
+    }
 }
